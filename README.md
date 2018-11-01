@@ -3,8 +3,8 @@
 ## Installation
 
 ```
-cf push route-service -c "route-service -s"
-cf push app -c "route-service"
+cf push route-service -c "route-services -s"
+cf push app -c "route-services"
 ```
 
 ```
