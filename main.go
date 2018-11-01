@@ -55,7 +55,7 @@ func routeServiceHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	newReq.Header = r.Header
 	newReq.Header.Add("X-DanL-Route-Service", "welcome to route services")
-	goToSleep()
+	//goToSleep()
 	resp, err := client.Do(newReq)
 	//fmt.Printf("%v\n", newReq)
 	if err != nil {
@@ -71,6 +71,7 @@ func routeServiceHandler(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(fmt.Sprintf("{ \"jerror\": \"%s\"}", err)))
 		return
 	}
+	goToSleep()
 	w.Write(body)
 }
 
